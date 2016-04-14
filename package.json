@@ -1,7 +1,7 @@
 {
   "name": "express-generator-api",
   "description": "Express' application generator",
-  "version": "5.0.2",
+  "version": "5.0.3",
   "author": "pietgeursen",
   "contributors": [
     "Aaron Heckmann <aaron.heckmann+github@gmail.com>",
