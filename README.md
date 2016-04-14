@@ -4,24 +4,21 @@
 
 [![NPM Version][npm-image]][npm-url]
 [![NPM Downloads][downloads-image]][downloads-url]
-[![Linux Build][travis-image]][travis-url]
-[![Windows Build][appveyor-image]][appveyor-url]
-[![Gratipay][gratipay-image]][gratipay-url]
 
 ## Installation
 
 ```sh
-$ npm install -g express-generator
+$ npm install -g express-generator-api
 ```
 
 ## Quick Start
-
-The quickest way to get started with express is to utilize the executable `express(1)` to generate an application as shown below:
+Fork of the crufty [express generator](https://github.com/expressjs/generator) that scaffolds a basic json api that listens at /users
+The quickest way to get started with express is to utilize the executable `express-api` to generate an application as shown below:
 
 Create the app:
 
 ```bash
-$ express /tmp/foo && cd /tmp/foo
+$ express-api /tmp/foo && cd /tmp/foo
 ```
 
 Install dependencies:
@@ -42,10 +39,6 @@ This generator can also be further configured with the following command line fl
 
     -h, --help          output usage information
     -V, --version       output the version number
-    -e, --ejs           add ejs engine support (defaults to jade)
-        --hbs           add handlebars engine support
-    -H, --hogan         add hogan.js engine support
-    -c, --css <engine>  add stylesheet <engine> support (less|stylus|compass|sass) (defaults to plain css)
         --git           add .gitignore
     -f, --force         force on non-empty directory
 
@@ -55,11 +48,6 @@ This generator can also be further configured with the following command line fl
 
 [npm-image]: https://img.shields.io/npm/v/express-generator.svg
 [npm-url]: https://npmjs.org/package/express-generator
-[travis-image]: https://img.shields.io/travis/expressjs/generator/master.svg?label=linux
-[travis-url]: https://travis-ci.org/expressjs/generator
-[appveyor-image]: https://img.shields.io/appveyor/ci/dougwilson/generator/master.svg?label=windows
 [appveyor-url]: https://ci.appveyor.com/project/dougwilson/generator
 [downloads-image]: https://img.shields.io/npm/dm/express-generator.svg
 [downloads-url]: https://npmjs.org/package/express-generator
-[gratipay-image]: https://img.shields.io/gratipay/dougwilson.svg
-[gratipay-url]: https://gratipay.com/dougwilson/
