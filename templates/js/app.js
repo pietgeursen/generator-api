@@ -9,7 +9,7 @@ var app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());{css}
+app.use(cookieParser())
 
 app.use('/users', users);
 
