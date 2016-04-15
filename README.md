@@ -2,9 +2,6 @@
 
 [Express'](https://www.npmjs.com/package/express) application generator.
 
-[![NPM Version][npm-image]][npm-url]
-[![NPM Downloads][downloads-image]][downloads-url]
-
 ## Installation
 
 ```sh
