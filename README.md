@@ -10,7 +10,7 @@ $ npm install -g express-generator-api
 
 ## Quick Start
 Fork of the crufty [express generator](https://github.com/expressjs/generator) that scaffolds a basic json api that listens at /users
-The quickest way to get started with express is to utilize the executable `express-api` to generate an application as shown below:
+The quickest way to get started with express is to utilize the executable `node_api_generator` to generate an application as shown below:
 
 Create the app:
 

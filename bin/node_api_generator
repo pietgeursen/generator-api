@@ -1,18 +1,18 @@
 #!/usr/bin/env node
 
-var program = require('commander');
-var mkdirp = require('mkdirp');
-var os = require('os');
-var fs = require('fs');
-var path = require('path');
-var readline = require('readline');
-var sortedObject = require('sorted-object');
+const program = require('commander');
+const mkdirp = require('mkdirp');
+const os = require('os');
+const fs = require('fs');
+const path = require('path');
+const readline = require('readline');
+const sortedObject = require('sorted-object');
 
-var _exit = process.exit;
-var eol = os.EOL;
-var pkg = require('../package.json');
+const _exit = process.exit;
+const eol = os.EOL;
+const pkg = require('../package.json');
 
-var version = pkg.version;
+const version = pkg.version;
 
 // Re-assign process.exit because of commander
 // TODO: Switch to a different command framework
@@ -40,7 +40,7 @@ if (!exit.exited) {
  */
 
 function before(obj, method, fn) {
-  var old = obj[method];
+  const old = obj[method];
 
   obj[method] = function () {
     fn.call(this);
@@ -53,7 +53,7 @@ function before(obj, method, fn) {
  */
 
 function confirm(msg, callback) {
-  var rl = readline.createInterface({
+  const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
   });
@@ -71,12 +71,12 @@ function confirm(msg, callback) {
  */
 
 function createApplication(app_name, path) {
-  var wait = 5;
+  let wait = 5;
 
   console.log();
   function complete() {
     if (--wait) return;
-    var prompt = launchedFromCmd() ? '>' : '$';
+    const prompt = launchedFromCmd() ? '>' : '$';
 
     console.log();
     console.log('   install dependencies:');
@@ -94,9 +94,9 @@ function createApplication(app_name, path) {
   }
 
   // JavaScript
-  var app = loadTemplate('js/app.js');
-  var www = loadTemplate('js/www');
-  var users = loadTemplate('js/routes/users.js');
+  let app = loadTemplate('js/app.js');
+  let www = loadTemplate('js/www');
+  let users = loadTemplate('js/routes/users.js');
 
 
   mkdir(path, function(){
@@ -107,7 +107,7 @@ function createApplication(app_name, path) {
     });
 
     // package.json
-    var pkg = {
+    const pkg = {
         name: app_name
       , version: '0.0.0'
       , private: true
@@ -171,8 +171,8 @@ function exit(code) {
     if (!(draining--)) _exit(code);
   }
 
-  var draining = 0;
-  var streams = [process.stdout, process.stderr];
+  let draining = 0;
+  const streams = [process.stdout, process.stderr];
 
   exit.exited = true;
 
@@ -208,10 +208,10 @@ function loadTemplate(name) {
 
 function main() {
   // Path
-  var destinationPath = program.args.shift() || '.';
+  const destinationPath = program.args.shift() || '.';
 
   // App name
-  var appName = path.basename(path.resolve(destinationPath));
+  const appName = path.basename(path.resolve(destinationPath));
 
   // Template engine
   program.template = 'jade';
